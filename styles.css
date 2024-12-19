@@ -2,15 +2,37 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: blue;
+    background-color: #00224D;
 }
 
-h1{
+.title{
     text-align: center;
     background-color: white;
     margin-top: 0;
     height: 100px;
     font-size: 295%;
+    font-family: "Press Start 2P";
+    padding-top: 2%;
+    background-color: #26355D;
+    color: #06D001;
+}
+
+.display{
+    background-color: white;
+    text-align: center;
+    margin: 0 3% 10%;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    
+}
+
+.result{
+    font-size: 350%;
+    margin: 0;
+    font-family: "Orbitron";
 }
 
 .main-container{
@@ -19,17 +41,70 @@ h1{
 }
 
 input{
-    width: 100%;
+    width: 90%;
+}
+
+
+
+/* Left side of the calculator. */
+
+.prefix{
+    text-align: center;
+    align-items: center;
+}
+
+.prefix-instructions{
+    width: 90%;
+    background-color: white;
+    margin: auto;
+}
+
+
+
+/* Middle. */
+
+.functionality-buttons{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30%;
+    width: 10%;
 }
 
 .calculate-button{
     background-color: white;
+    margin: 10%;
+    height: 70px;
+    border-radius: 100px;
 }
 
 .toggle-button{
     background-color: white;
+    margin: 10%;
+    height: 70px;
+    border-radius: 100px;
 }
 
 .night-day{
     background-color: white;
+    margin: 10%;
+    height: 70px;
+    border-radius: 100px;
+}
+
+
+
+/* Right side of the calculator. */
+
+.postfix{
+    text-align: center;
+}
+
+.postfix-instructions{
+    background-color: white;
+    width: 90%;
+    margin: auto;
 }
