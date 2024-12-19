@@ -3,14 +3,16 @@ body{
     padding: 0;
     box-sizing: border-box;
     background-color: #00224D;
+    display: flex;
+    flex-direction: column;
 }
 
 .title{
     text-align: center;
     background-color: white;
-    margin-top: 0;
+    margin: 0 2% 15%;
     height: 100px;
-    font-size: 295%;
+    font-size: 235%;
     font-family: "Press Start 2P";
     padding-top: 2%;
     background-color: #26355D;
@@ -30,7 +32,7 @@ body{
 }
 
 .result{
-    font-size: 350%;
+    font-size: 300%;
     margin: 0;
     font-family: "Orbitron";
 }
@@ -44,6 +46,11 @@ input{
     width: 90%;
 }
 
+.input-box{
+    height: 50%;
+    font-family: 'Montserrat';
+    font-size: large;
+}
 
 
 /* Left side of the calculator. */
@@ -51,6 +58,7 @@ input{
 .prefix{
     text-align: center;
     align-items: center;
+    height: 200px;
 }
 
 .prefix-instructions{
@@ -60,8 +68,24 @@ input{
 }
 
 
+/* Right side of the calculator. */
 
-/* Middle. */
+.postfix{
+    text-align: center;
+    height: 200px;
+}
+
+.postfix-instructions{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+}
+
+i{
+    color: black;
+}
+
+/* Lower Buttons */
 
 .functionality-buttons{
     text-align: center;
@@ -70,8 +94,9 @@ input{
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin-top: 30%;
-    width: 10%;
+    margin: auto;
+    width: 25%;
+    margin-top: 10%;
 }
 
 .calculate-button{
@@ -79,6 +104,10 @@ input{
     margin: 10%;
     height: 70px;
     border-radius: 100px;
+}
+
+.fa-calculator{
+    margin: auto;
 }
 
 .toggle-button{
@@ -93,18 +122,4 @@ input{
     margin: 10%;
     height: 70px;
     border-radius: 100px;
-}
-
-
-
-/* Right side of the calculator. */
-
-.postfix{
-    text-align: center;
-}
-
-.postfix-instructions{
-    background-color: white;
-    width: 90%;
-    margin: auto;
 }
