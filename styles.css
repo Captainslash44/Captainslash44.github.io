@@ -20,7 +20,7 @@ body{
 }
 
 .display{
-    background-color: white;
+    background-color: #DBD3D3;
     text-align: center;
     margin: 0 3% 10%;
     height: 100px;
@@ -35,6 +35,8 @@ body{
     font-size: 300%;
     margin: 0;
     font-family: "Orbitron";
+    font-weight: 900;
+    color: #7E2553;
 }
 
 .main-container{
@@ -44,12 +46,15 @@ body{
 
 input{
     width: 90%;
+    background-color: #DBD3D3;
+    color: #7E2553;
 }
 
 .input-box{
-    height: 50%;
+    height: 100px;
     font-family: 'Montserrat';
     font-size: large;
+    font-weight: 750;
 }
 
 
@@ -57,14 +62,21 @@ input{
 
 .prefix{
     text-align: center;
-    align-items: center;
-    height: 200px;
+    height: 150px;
+    background-color: #FF204E;
+    padding: 1%;
+    height: fit-content;
 }
+
 
 .prefix-instructions{
     width: 90%;
-    background-color: white;
+    background-color: #000000;
     margin: auto;
+    font-family: "Roboto Slab" ;
+    color: white;
+    text-align: center;
+    
 }
 
 
@@ -72,13 +84,18 @@ input{
 
 .postfix{
     text-align: center;
-    height: 200px;
+    height: 150px;
+    background-color: #FF204E;
+    padding: 1%;
+    height: fit-content;
 }
 
 .postfix-instructions{
-    background-color: white;
+    background-color: #000000;
     width: 90%;
     margin: auto;
+    font-family: "Roboto Slab" ;
+    color: white;
 }
 
 i{
@@ -106,8 +123,8 @@ i{
     border-radius: 100px;
 }
 
-.fa-calculator{
-    margin: auto;
+.fa{
+    margin-top: 15%;
 }
 
 .toggle-button{
@@ -118,6 +135,13 @@ i{
 }
 
 .night-day{
+    background-color: white;
+    margin: 10%;
+    height: 70px;
+    border-radius: 100px;
+}
+
+.clear-button{
     background-color: white;
     margin: 10%;
     height: 70px;
