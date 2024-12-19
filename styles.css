@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: blue;
+}
+
+h1{
+    text-align: center;
+    background-color: white;
+    margin-top: 0;
+    height: 100px;
+    font-size: 295%;
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input{
+    width: 100%;
+}
+
+.calculate-button{
+    background-color: white;
+}
+
+.toggle-button{
+    background-color: white;
+}
+
+.night-day{
+    background-color: white;
+}

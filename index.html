@@ -3,10 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Calculator App</title>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <h1>Prefix / Postfix Caluclator</h1>
+
+    <div class="display"></div>
+    <div class="main-container">
+      <div class="prefix">
+        <input type="text" />
+        <div class="prefix-instructions">
+          <p>These are the instructions for the prefix.</p>
+        </div>
+      </div>
+      <div class="functionality_buttons">
+        <div class="calculate-button">=</div>
+        <div class="toggle-button">-></div>
+        <div class="night-day">moon</div>
+      </div>
+      <div class="postfix">
+        <input type="text" />
+        <div class="postfix-instructions">
+          <p>These are the instructions for the postfix.</p>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="app.js" type="text/javascript"></script>
 </html>
