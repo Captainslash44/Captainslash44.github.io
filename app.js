@@ -1,0 +1,1 @@
+document.getElementById("prefix-input").disabled = true;
