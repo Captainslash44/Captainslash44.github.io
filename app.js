@@ -31,7 +31,7 @@ function divide(a,b){
 
 function calculatePrefix(expression){
 
-    if(isNaN(expression[-1]))
+    if(isNaN(expression[expression.length - 1]))
         return "Invalid Format";
 
     if (expression == "" || expression == "0")
