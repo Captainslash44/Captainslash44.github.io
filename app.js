@@ -31,6 +31,9 @@ function divide(a,b){
 
 function calculatePrefix(expression){
 
+    if(isNaN(expression[-1]))
+        return "Invalid Format";
+
     if (expression == "" || expression == "0")
         return "0"
 
@@ -73,6 +76,9 @@ function calculatePrefix(expression){
 
 
 function calculatePostfix(expression){
+
+    if(isNaN(expression[0]))
+        return "Invalid format";
 
     if (expression == "" || expression == "0")
         return "0"
@@ -147,7 +153,7 @@ toggle_button.addEventListener("click", toggleMode);
 clear_button.addEventListener("click", clear_all);
 
 calculate_button.addEventListener("click", () =>{
-    
+
     if (prefix_input.disabled == true){
         display.innerHTML = (calculatePostfix(postfix_input.value));
     }
