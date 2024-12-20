@@ -1,6 +1,6 @@
 let mode = false; // False is for prefix mode - True for postfix mode.
 // let prefix_expression = [];
-let postfix_expression = [];
+// let postfix_expression = [];
 
 
 
@@ -64,3 +64,38 @@ function calculatePrefix(expression){
 }
 
 
+function calculatePostfix(expression){
+
+    let postfix_expression = [];
+
+    for (let i = 0; i < expression.length; i++){
+
+        let n = expression[i];
+
+        if (! isNaN(parseInt(n)) )
+            postfix_expression.push(parseInt((n.charCodeAt(0) - '0'.charCodeAt(0))));
+
+        else if (isNaN(n)){
+            let num2 = postfix_expression.pop();// the values of numbers were switched since we are reading the same way
+            let num1 = postfix_expression.pop(); // but evaluating in the opposite direction.
+            if (n == "+"){
+                postfix_expression.push(add(num1,num2)); 
+            }
+            else if(n == "-"){
+                postfix_expression.push(substract(num1,num2));  
+            }
+            else if (n == "*"){
+                postfix_expression.push(multiply(num1,num2));
+            }
+            else if (n == "/"){
+                postfix_expression.push(divide(num1,num2));
+            }
+            else{
+                return "Invalid Expression";
+            }
+        }
+    }
+    return postfix_expression.pop();
+}
+
+console.log(calculatePostfix("231k+9-"));
