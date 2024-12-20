@@ -119,3 +119,12 @@ clear_button = document.getElementById("clear-button");
 postfix_input.disabled = true;
 toggle_button.addEventListener("click", toggleMode);
 
+calculate_button.addEventListener("click", () =>{
+    if (prefix_input.disabled == true){
+        console.log(calculatePostfix(postfix_input.value));
+    }
+    else{
+        console.log(calculatePrefix(prefix_input.value));
+    }
+})
+        
