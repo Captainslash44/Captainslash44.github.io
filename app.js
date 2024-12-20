@@ -1,4 +1,4 @@
-
+let display = document.getElementById("result");
 // let prefix_expression = [];
 // let postfix_expression = [];
 
@@ -27,7 +27,15 @@ function divide(a,b){
     return a/b;
 }
 
+
+
 function calculatePrefix(expression){
+
+    if (expression == "" || expression == "0")
+        return "0"
+
+    if (expression.length == 1)
+        return expression
 
     let prefix_expression = [];
 
@@ -66,6 +74,12 @@ function calculatePrefix(expression){
 
 function calculatePostfix(expression){
 
+    if (expression == "" || expression == "0")
+        return "0"
+
+    if (expression.length == 1)
+        return expression
+
     let postfix_expression = [];
 
     for (let i = 0; i < expression.length; i++){
@@ -98,16 +112,26 @@ function calculatePostfix(expression){
     return postfix_expression.pop();
 }
 
+
 function toggleMode(){
     if(prefix_input.disabled == true){
         prefix_input.disabled = false;
+        postfix_input.value = "";
         postfix_input.disabled = true;
     }
     else{
         prefix_input.disabled = true;
+        prefix_input.value = "";
         postfix_input.disabled = false;
     }
 }
+
+function clear_all(){
+    display.innerHTML = "";
+    prefix_input.value = "";
+    postfix_input.value = "";
+}
+
 
 prefix_input = document.getElementById("prefix-input");
 postfix_input = document.getElementById("postfix-input");
@@ -117,14 +141,18 @@ night_button = document.getElementById("night-day");
 clear_button = document.getElementById("clear-button");
 
 postfix_input.disabled = true;
+
 toggle_button.addEventListener("click", toggleMode);
 
+clear_button.addEventListener("click", clear_all);
+
 calculate_button.addEventListener("click", () =>{
+    
     if (prefix_input.disabled == true){
-        console.log(calculatePostfix(postfix_input.value));
+        display.innerHTML = (calculatePostfix(postfix_input.value));
     }
     else{
-        console.log(calculatePrefix(prefix_input.value));
+        display.innerHTML = (calculatePrefix(prefix_input.value));
     }
 })
         
