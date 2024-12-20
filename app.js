@@ -1,11 +1,11 @@
-let mode = false; // False is for prefix mode - True for postfix mode.
+
 // let prefix_expression = [];
 // let postfix_expression = [];
 
 
-
 let calculate_button;
 let toggle_button;
+let night_button;
 let clear_button;
 let prefix_input;
 let postfix_input;
@@ -98,4 +98,24 @@ function calculatePostfix(expression){
     return postfix_expression.pop();
 }
 
-console.log(calculatePostfix("231k+9-"));
+function toggleMode(){
+    if(prefix_input.disabled == true){
+        prefix_input.disabled = false;
+        postfix_input.disabled = true;
+    }
+    else{
+        prefix_input.disabled = true;
+        postfix_input.disabled = false;
+    }
+}
+
+prefix_input = document.getElementById("prefix-input");
+postfix_input = document.getElementById("postfix-input");
+calculate_button = document.getElementById("calculate-button");
+toggle_button = document.getElementById("toggle-button");
+night_button = document.getElementById("night-day");
+clear_button = document.getElementById("clear-button");
+
+postfix_input.disabled = true;
+toggle_button.addEventListener("click", toggleMode);
+
