@@ -13,13 +13,17 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
     <title>Calculator App</title>
   </head>
+
   <body>
     <h1 class="title">Prefix / Postfix Caluclator</h1>
+
     <div class="full-structure">
       <div class="display" id="display">
         <h1 class="result" id="result">Invalid Value</h1>
       </div>
+
       <div class="main-container">
+        <!-- LEFT WING -->
         <div class="prefix">
           <input class="input-box" id="prefix-input" type="text" />
           <div class="prefix-instructions">
@@ -27,6 +31,7 @@
           </div>
         </div>
 
+        <!-- RIGHT WING -->
         <div class="postfix">
           <input class="input-box" id="postfix-input" type="text" />
           <div class="postfix-instructions">
@@ -34,6 +39,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Buttons -->
       <div class="functionality-buttons">
         <div class="calculate-button" id="calculate-button">
           <i class="fa fa-calculator fa-lg" aria-hidden="true"></i>
